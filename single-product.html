@@ -1,0 +1,434 @@
+<!--
+Template Name: Medistore (v2.0)
+File Name: single-product.html
+Author Name: ThemeVault
+Author URI: https://www.themevault.net/
+License URI: https://www.themevault.net/license/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Details — MediStore</title>
+    <meta name="description" content="Aspirin 300 mg Tablets, Pack of 3: product details — price, availability, reviews and related products at MediStore.">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <!-- top bar: logo · cart · account · language/currency -->
+    <div class="container py-3">
+        <div class="row align-items-center gy-3">
+            <div class="col-12 col-md-4 text-center text-md-start">
+                <a href="index.html" class="ms-logo">Medi<span>Store</span></a>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-3">
+                    <a href="cart.html" class="ms-cartline text-decoration-none">
+                        <img src="images/cart.png" alt="Cart" width="26" height="27">
+                        <span>Your cart:</span>
+                        <span class="ms-cart-total">€14.00</span>
+                        <span class="ms-cart-items">(1 item)</span>
+                    </a>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-ms btn-sm" href="login.html">Login</a>
+                        <a class="btn btn-ms btn-sm" href="register.html">Signup</a>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="dropdown">
+                            <button class="btn btn-ms-blue btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Language</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                                <li><a class="dropdown-item" href="#">German</a></li>
+                                <li><a class="dropdown-item" href="#">Dutch</a></li>
+                                <li><a class="dropdown-item" href="#">Swedish</a></li>
+                                <li><a class="dropdown-item" href="#">Danish</a></li>
+                                <li><a class="dropdown-item" href="#">Portuguese</a></li>
+                                <li><a class="dropdown-item" href="#">Finnish</a></li>
+                                <li><a class="dropdown-item" href="#">Norwegian</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-ms-blue btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Currency</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">U.S. Dollar</a></li>
+                                <li><a class="dropdown-item" href="#">Euro</a></li>
+                                <li><a class="dropdown-item" href="#">Pounds Sterling</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main navigation -->
+    <nav class="navbar navbar-expand-lg ms-navbar" aria-label="Main navigation">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Guarantee</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Disclaimer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shipping &amp; Payment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Site Map</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- search + manufacturer -->
+    <div class="container mt-3 ms-search">
+        <div class="row gy-2">
+            <div class="col-md-6">
+                <form name="quick_find" role="search" action="product-list.html">
+                    <div class="input-group input-group-lg">
+                        <label class="visually-hidden" for="searchInput">Search products</label>
+                        <input type="search" id="searchInput" class="form-control" placeholder="Enter search keywords here">
+                        <button class="btn btn-ms" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form name="manufacturers">
+                    <label class="visually-hidden" for="manufacturerSelect">Manufacturer</label>
+                    <select id="manufacturerSelect" name="manufacturers_id" class="form-select form-select-lg">
+                        <option value="" selected>Please select manufacturer</option>
+                        <option>MediStore Own Brand</option>
+                        <option>Greenleaf Health</option>
+                        <option>CarePlus</option>
+                        <option>Amet Care</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container mt-4">
+    <div class="row g-4">
+
+        <!-- sidebar -->
+        <aside class="col-md-4 col-lg-3 ms-sidebar">
+            <div class="accordion" id="sidebarAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCategories" aria-expanded="true" aria-controls="collapseCategories">Categories</button>
+                    </h2>
+                    <div id="collapseCategories" class="accordion-collapse collapse show" data-bs-parent="#sidebarAccordion">
+                        <div class="accordion-body">
+                            <ul class="ms-links">
+                                <li><a href="product.html">Medicines</a> <span class="ms-count">(94)</span></li>
+                                <li><a href="product.html">Vitamins &amp; Supplements</a> <span class="ms-count">(9)</span></li>
+                                <li><a href="product.html">Pain Relief</a> <span class="ms-count">(5)</span></li>
+                                <li><a href="product.html">Cold &amp; Flu</a> <span class="ms-count">(6)</span></li>
+                                <li><a href="product.html">Allergy &amp; Hay Fever</a> <span class="ms-count">(94)</span></li>
+                                <li><a href="product.html">Homeopathy</a> <span class="ms-count">(94)</span></li>
+                                <li><a href="product.html">First Aid</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNew" aria-expanded="false" aria-controls="collapseNew">What's New?</button>
+                    </h2>
+                    <div id="collapseNew" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                        <div class="accordion-body">
+                            <div class="ms-mini-product">
+                                <a href="single-product.html">
+                                    <img src="images/img4.jpg" alt="Homeopathic Globules Set" loading="lazy">
+                                </a>
+                                <a href="single-product.html">Homeopathic Globules Set</a>
+                                <span class="ms-price">€21.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">Information</button>
+                    </h2>
+                    <div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                        <div class="accordion-body">
+                            <ul class="ms-links">
+                                <li><a href="#">Shipping &amp; Returns</a></li>
+                                <li><a href="#">Privacy Notice</a></li>
+                                <li><a href="#">Conditions of Use</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBest" aria-expanded="false" aria-controls="collapseBest">Bestsellers</button>
+                    </h2>
+                    <div id="collapseBest" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                        <div class="accordion-body">
+                            <div class="ms-mini-product">
+                                <a href="single-product.html">
+                                    <img src="images/img4.jpg" alt="Homeopathic Globules Set" loading="lazy">
+                                </a>
+                                <a href="single-product.html">Homeopathic Globules Set</a>
+                                <span class="ms-price">€21.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecials" aria-expanded="false" aria-controls="collapseSpecials">Specials</button>
+                    </h2>
+                    <div id="collapseSpecials" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                        <div class="accordion-body">
+                            <div class="ms-mini-product">
+                                <a href="single-product.html">
+                                    <img src="images/img6.jpg" alt="Probiotic Capsules, 60" loading="lazy">
+                                </a>
+                                <a href="single-product.html">Probiotic Capsules, 60</a>
+                                <span class="ms-price">€18.50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- content -->
+        <div class="col-md-8 col-lg-9">
+            <nav class="ms-breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html" aria-label="Home"><i class="fa-solid fa-house" aria-hidden="true"></i></a>
+                <span class="ms-sep">/</span>
+                <a href="single-product.html">Aspirin 300 mg Tablets, Pack of 3</a>
+            </nav>
+
+            <!-- product detail -->
+            <section aria-labelledby="productTitle">
+                <div class="row g-4">
+                    <div class="col-sm-6">
+                        <div class="ms-panel">
+                            <div class="ms-panel-body">
+                                <img src="images/img21.jpg" alt="Aspirin 300 mg Tablets, Pack of 3" class="img-fluid w-100">
+                            </div>
+                        </div>
+                        <!-- thumbnail gallery: plain links to the full-size images
+                             (the original jQuery image-switcher is not carried over) -->
+                        <div class="d-flex gap-2 mt-2">
+                            <a href="images/img21.jpg" class="ms-panel p-1" title="Product view 1">
+                                <img src="images/img21.jpg" alt="Product photo, alternate view 1" class="img-fluid" loading="lazy">
+                            </a>
+                            <a href="images/img22.jpg" class="ms-panel p-1" title="Product view 2">
+                                <img src="images/img22.jpg" alt="Product photo, alternate view 2" class="img-fluid" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex gap-2 mb-2">
+                            <button type="button" class="btn btn-ms btn-icon" aria-label="Add to wishlist"><i class="fa-solid fa-heart" aria-hidden="true"></i></button>
+                            <button type="button" class="btn btn-ms btn-icon" aria-label="Add to compare"><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i></button>
+                        </div>
+                        <h1 class="ms-section-title" id="productTitle">Aspirin 300 mg Tablets, Pack of 3</h1>
+                        <ul class="list-unstyled">
+                            <li><span class="fw-semibold">Product Code:</span> MS-ASP300</li>
+                            <li><span class="fw-semibold">Reward Points:</span> 10</li>
+                            <li><span class="fw-semibold">Availability:</span> <span class="text-success fw-semibold">In Stock</span></li>
+                        </ul>
+                        <p class="mb-3">
+                            <span class="ms-price fs-3 d-block">€9.90</span>
+                            <span>Ex Tax: €8.25</span>
+                        </p>
+                        <form action="cart.html" method="get" class="mb-3">
+                            <div class="mb-3">
+                                <label for="input-quantity" class="form-label">Qty</label>
+                                <input type="number" class="form-control" id="input-quantity" value="1" min="1" name="quantity">
+                                <input type="hidden" value="49" name="product_id">
+                            </div>
+                            <button type="submit" class="btn btn-ms btn-lg w-100"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> ADD TO CART</button>
+                        </form>
+                        <p class="mb-2">
+                            <span class="ms-stars" role="img" aria-label="Rated 0 of 5">
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                                <i class="fa-regular fa-star" aria-hidden="true"></i>
+                            </span>
+                            <a href="#tab-review">0 reviews</a> / <a href="#tab-review">Write a review</a>
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </section>
+
+            <!-- description / reviews tabs -->
+            <section class="mt-4" aria-label="Product description and reviews">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="descriptionTab" data-bs-toggle="tab" data-bs-target="#tab-description" type="button" role="tab" aria-controls="tab-description" aria-selected="false">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="reviewTab" data-bs-toggle="tab" data-bs-target="#tab-review" type="button" role="tab" aria-controls="tab-review" aria-selected="true">Reviews (0)</button>
+                    </li>
+                </ul>
+                <div class="tab-content pt-3">
+                    <div id="tab-description" class="tab-pane" role="tabpanel" aria-labelledby="descriptionTab" tabindex="0">
+                        <p>Three bottles of 300 mg aspirin tablets, sold together as our best-value pack. Each bottle has a child-resistant, tamper-evident cap. Not for children under 16. Always read the leaflet before use, and ask our pharmacist if you take other medicines.</p>
+                    </div>
+                    <div id="tab-review" class="tab-pane show active" role="tabpanel" aria-labelledby="reviewTab" tabindex="0">
+                        <form id="form-review">
+                            <h2 class="ms-section-title">Write a review</h2>
+                            <div class="mb-3">
+                                <label for="input-name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="input-name" value="" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-review" class="form-label">Your Review</label>
+                                <textarea class="form-control" id="input-review" rows="5" name="text" required></textarea>
+                                <div class="form-text"><span class="text-danger">Note:</span> plain text only; links and formatting are removed.</div>
+                            </div>
+                            <fieldset class="mb-3">
+                                <legend class="form-label fs-6">Rating</legend>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span>Bad</span>
+                                    <div class="form-check form-check-inline m-0">
+                                        <input class="form-check-input" type="radio" value="1" name="rating" id="rating1">
+                                        <label class="form-check-label visually-hidden" for="rating1">Rate 1 of 5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline m-0">
+                                        <input class="form-check-input" type="radio" value="2" name="rating" id="rating2">
+                                        <label class="form-check-label visually-hidden" for="rating2">Rate 2 of 5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline m-0">
+                                        <input class="form-check-input" type="radio" value="3" name="rating" id="rating3">
+                                        <label class="form-check-label visually-hidden" for="rating3">Rate 3 of 5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline m-0">
+                                        <input class="form-check-input" type="radio" value="4" name="rating" id="rating4">
+                                        <label class="form-check-label visually-hidden" for="rating4">Rate 4 of 5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline m-0">
+                                        <input class="form-check-input" type="radio" value="5" name="rating" id="rating5">
+                                        <label class="form-check-label visually-hidden" for="rating5">Rate 5 of 5</label>
+                                    </div>
+                                    <span>Good</span>
+                                </div>
+                            </fieldset>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-ms" id="button-review" type="submit">
+                                    <i class="fa-solid fa-caret-right" aria-hidden="true"></i>&nbsp;Continue
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- related products -->
+            <section class="mt-4" aria-labelledby="relatedTitle">
+                <h2 class="ms-section-title" id="relatedTitle">Related Product</h2>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-xl-4">
+                        <article class="ms-card">
+                            <h3 class="ms-title"><a href="single-product.html">Pain Relief Tablets, 32</a></h3>
+                            <a class="ms-media" href="single-product.html"><img src="images/img15.jpg" alt="Pain Relief Tablets, 32" loading="lazy"></a>
+                            <div><span class="ms-price">€4.50</span></div>
+                            <p class="ms-desc">Film-coated tablets for headaches and everyday aches. Always read the label.</p>
+                            <div class="ms-actions">
+                                <a class="btn btn-ms" href="cart.html">Add to Cart</a>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-ms btn-icon" aria-label="Add to wishlist"><i class="fa-solid fa-heart" aria-hidden="true"></i></button>
+                                    <button type="button" class="btn btn-ms btn-icon" aria-label="Add to compare"><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                        <article class="ms-card">
+                            <h3 class="ms-title"><a href="single-product.html">Homeopathic Pillules C30, 4 g</a></h3>
+                            <a class="ms-media" href="single-product.html"><img src="images/d15.jpg" alt="Homeopathic Pillules C30, 4 g" loading="lazy"></a>
+                            <div><span class="ms-price">€8.20</span></div>
+                            <p class="ms-desc">Small tubes of C30 pillules with a dispenser cap, one dose at a time.</p>
+                            <div class="ms-actions">
+                                <a class="btn btn-ms" href="cart.html">Add to Cart</a>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-ms btn-icon" aria-label="Add to wishlist"><i class="fa-solid fa-heart" aria-hidden="true"></i></button>
+                                    <button type="button" class="btn btn-ms btn-icon" aria-label="Add to compare"><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                        <article class="ms-card">
+                            <h3 class="ms-title"><a href="single-product.html">Single-Dose Vials, Pack of 10</a></h3>
+                            <a class="ms-media" href="single-product.html"><img src="images/d1.jpg" alt="Single-Dose Vials, Pack of 10" loading="lazy"></a>
+                            <div><span class="ms-price">€34.00</span></div>
+                            <p class="ms-desc">Ten sealed glass vials in a card tray, each one numbered and dated.</p>
+                            <div class="ms-actions">
+                                <a class="btn btn-ms" href="cart.html">Add to Cart</a>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-ms btn-icon" aria-label="Add to wishlist"><i class="fa-solid fa-heart" aria-hidden="true"></i></button>
+                                    <button type="button" class="btn btn-ms btn-icon" aria-label="Add to compare"><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer class="ms-footer">
+    <div class="container">
+        <div class="row align-items-center gy-3">
+            <div class="col-md-2 text-center text-md-start">
+                <a href="index.html" class="ms-logo">Medi<span>Store</span></a>
+            </div>
+            <div class="col-md-7">
+                <nav class="ms-footer-menu" aria-label="Footer navigation">
+                    <a href="index.html">Home</a><span class="ms-sep">|</span>
+                    <a href="#">About Us</a><span class="ms-sep">|</span>
+                    <a href="#">Disclaimer</a><span class="ms-sep">|</span>
+                    <a href="#">Guarantee</a><span class="ms-sep">|</span>
+                    <a href="#">Shipping &amp; Payment</a><span class="ms-sep">|</span>
+                    <a href="#">Privacy Policy</a><span class="ms-sep">|</span>
+                    <a href="#">Terms &amp; Conditions</a><span class="ms-sep">|</span>
+                    <a href="#">Contact Us</a><span class="ms-sep">|</span>
+                    <a href="#">Site Map</a>
+                </nav>
+            </div>
+            <div class="col-md-3 text-center text-md-end ms-social">
+                <a href="#" class="btn btn-ms btn-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-ms btn-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-ms btn-icon" aria-label="Yahoo"><i class="fa-brands fa-yahoo" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-ms btn-icon" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-ms btn-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="ms-copyright">
+            <!--Do not remove Backlink from footer of the template. To remove it you can purchase the Backlink !-->
+            © 2026 All rights reserved. 
+            <a href="https://www.themevault.net/medistore-medical-and-drugstore-html-web-template" target="_blank" rel="noopener">Medistore template</a> by ThemeVault.
+        </div>
+    </div>
+</footer>
+
+<a href="#top" id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></a>
+
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

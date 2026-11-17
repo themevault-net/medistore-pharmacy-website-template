@@ -1,0 +1,101 @@
+==========================================================
+ MediStore — Medical & Drugstore HTML Template
+ by ThemeVault (https://www.themevault.net)
+==========================================================
+
+Version 2.2 — November 2026
+----------------------------------------------------------
+- The ex-tax price beside each product on the category pages
+  matches its price again (2.1 changed the prices but not these).
+- The category pages have a real description and real filter
+  links in Refine Search, in place of OpenCart's sample text.
+
+Version 2.1 — November 2026
+----------------------------------------------------------
+- Real pharmacy copy in place of the placeholder text: the home
+  page introduction, the category headings, sixteen products with
+  their own names, descriptions and prices (one name and price per
+  product on every page), the brand filter and the category list.
+- The checkout works: each Continue checks the step's required
+  fields and opens the next step, and Confirm Order checks every
+  step and then shows an order number.
+- The cart and checkout show a real product, euro prices like the
+  rest of the shop, and totals that add up.
+- Buy Now buttons read Add to Cart, the review form confirms, and
+  the header cart matches the cart page.
+- The download's files now unzip correctly on Mac and Linux too.
+
+VERSION 2.0 — August 2026
+----------------------------------------------------------
+A full modernization of the template. The design you know
+is unchanged — everything under the hood is new.
+
+FRAMEWORK & LIBRARIES
+ * Bootstrap upgraded 3.3.6 -> 5.3.8 (the 3.x line has been
+   end-of-life since 2019).
+ * jQuery removed entirely — the template now runs on a few
+   lines of vanilla JavaScript (js/main.js). No dependencies
+   to keep patched.
+ * Font Awesome upgraded 4.7 -> 6.7 with modern woff2 fonts
+   only (~800 KB of legacy .eot/.svg/.ttf font files removed).
+ * Owl Carousel replaced with a dependency-free CSS
+   scroll-snap product strip (arrow buttons included).
+ * Bootstrap 3 glyphicons removed (accordion icons now come
+   from Bootstrap 5's accordion component).
+
+STRUCTURE & STANDARDS
+ * Entry page renamed to index.html (home.html kept as a
+   redirect so old links keep working).
+ * Semantic HTML5 landmarks throughout: header, nav, main,
+   aside, section, article, footer.
+ * The duplicated hidden mobile navbar was removed — one
+   responsive Bootstrap 5 navbar handles all screen sizes.
+ * All inline style="" attributes moved into the stylesheet.
+ * Broken/unclosed markup fixed (unclosed <li> tags in the
+   product cards, stray tags, duplicate menu entries).
+ * Every image now has descriptive alt text; icon-only
+   buttons have aria-labels; form fields have labels.
+ * Sidebar boxes rebuilt on Bootstrap 5's accordion (the old
+   version needed a jQuery chevron-toggle script).
+
+DESIGN (same look, more robust)
+ * All colors, fonts and spacing are CSS custom properties
+   at the top of css/style.css — re-skin the template by
+   editing one token block.
+ * Product cards rebuilt so the grid stays perfectly even
+   with real-world content: any title/description length,
+   any image shape (aspect-ratio boxes + line clamping +
+   bottom-pinned button rows). No more fixed pixel heights.
+ * Subtle polish: hover lift on cards, focus rings in the
+   brand color, consistent border radius and shadows.
+ * Fixed: leftover text from an unrelated site in the login
+   page copy and image titles was replaced with MediStore
+   wording.
+ * Fixed: footer logo said "DRUGSTORE" while the header said
+   "MediSTORE"; a sidebar bullet image pointed at a dev
+   server that no longer exists.
+
+PERFORMANCE
+ * Scripts load with defer at the end of the page (the old
+   version loaded jQuery + plugins render-blocking in head).
+ * Product images lazy-load.
+ * Template size: 2.5 MB -> 1.2 MB unpacked; download 1.0 MB -> 0.55 MB.
+
+FILES
+ * css/bootstrap.min.css      Bootstrap 5.3.8
+ * css/fontawesome.min.css    Font Awesome 6.7.2 (+ webfonts/)
+ * css/style.css              template styles (design tokens
+                              at the top)
+ * js/bootstrap.bundle.min.js Bootstrap behavior (dropdowns,
+                              accordion, tabs, collapse)
+ * js/main.js                 back-to-top + product strips
+ * index.html … register.html the eight template pages
+
+----------------------------------------------------------
+VERSION 1.x — 2017
+ * Original release (Bootstrap 3, jQuery, Font Awesome 4).
+
+----------------------------------------------------------
+License: https://www.themevault.net/license/
+Please keep the ThemeVault credit link in the footer, or
+purchase the backlink removal at themevault.net.
