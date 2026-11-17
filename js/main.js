@@ -101,3 +101,26 @@ document.querySelectorAll(".ms-strip").forEach((strip) => {
     review.reset();
   });
 })();
+
+// --- 2.3: contact form ---
+// Forms marked data-ms-form check their required fields, then confirm in the page. A static page sends nothing:
+// give the form an action (your form service's address) to receive the messages.
+document.querySelectorAll("form[data-ms-form]").forEach(function (form) {
+  form.addEventListener("submit", function (e) {
+    if (form.getAttribute("action")) return;
+    e.preventDefault();
+    var ok = true;
+    form.querySelectorAll("[required]").forEach(function (f) {
+      var good = f.value.trim() !== "" && f.checkValidity();
+      f.classList.toggle("is-invalid", !good);
+      if (!good && ok) { f.focus(); ok = false; }
+    });
+    if (!ok) return;
+    var note = form.querySelector(".ms-form-note") || document.createElement("div");
+    note.className = "alert alert-success mt-3 ms-form-note";
+    note.setAttribute("role", "status");
+    note.textContent = "Thank you, your message has been sent. We usually reply within one working day.";
+    form.appendChild(note);
+    form.reset();
+  });
+});

@@ -3,6 +3,18 @@
  by ThemeVault (https://www.themevault.net)
 ==========================================================
 
+Version 2.3 — November 2026
+----------------------------------------------------------
+- Eight new pages behind links that went nowhere before: About
+  Us, Our Guarantee, Disclaimer, Shipping & Payment, Privacy
+  Policy, Terms & Conditions, Contact Us and Site Map. The top
+  menu, the footer menu and the sidebar Information box link to
+  them on every page, and the menu marks the page you are on.
+- Contact Us has a form that checks its fields and confirms in
+  the page; give it an action to receive the messages.
+- One product photo that showed another company's brand is
+  replaced (images/img13b.jpg, credited in IMAGE-CREDITS.txt).
+
 Version 2.2 — November 2026
 ----------------------------------------------------------
 - The ex-tax price beside each product on the category pages

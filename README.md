@@ -13,6 +13,9 @@ It's the most downloaded template in our ecommerce collection.
 
 - **A full set of shop pages:** home, two category pages (grid and list views, sorting, a manufacturer filter in the
   search bar), a product page with reviews and related products, cart, checkout, login and register.
+- **The pages a pharmacy needs for trust:** About Us, Our Guarantee, Disclaimer, Shipping & Payment, Privacy Policy,
+  Terms & Conditions, Contact Us (with a form that checks its fields) and a Site Map, with sample text written for a
+  small pharmacy. Replace the sample shop details with your own.
 - **A checkout that works in the browser:** each step checks its required fields before opening the next one, and
   Confirm Order shows an order number. The cart and checkout totals add up.
 - **Real pharmacy copy:** sixteen products with their own names, descriptions and prices, real category names and a
