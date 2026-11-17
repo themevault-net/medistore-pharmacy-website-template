@@ -20,7 +20,7 @@ It's the most downloaded template in our ecommerce collection.
 - **Bootstrap 5.3 with no jQuery:** a few lines of plain JavaScript (`js/main.js`) and a scroll-snap product strip
   with arrow buttons in place of the old carousel plugin.
 - **Easy to re-skin:** colours, fonts and spacing are CSS custom properties at the top of `css/style.css`.
-- **Light:** about 1.2 MB unpacked, Font Awesome 6 included locally.
+- **Light:** about 1.3 MB unpacked, Font Awesome 6 included locally.
 
 ## Use it
 
